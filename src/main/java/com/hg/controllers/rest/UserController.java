@@ -36,5 +36,12 @@ public class UserController {
 		System.out.println("===="+user);
 		userService.addUser(user);		
 	}
+	
+	
+	@RequestMapping(value="/updateUser/{userId}",method=RequestMethod.PUT)
+	public void updateUser(@RequestBody User user, @PathVariable Integer userId) {
+		userService.updateUser(user, userId);
+	}
+	
 
 }

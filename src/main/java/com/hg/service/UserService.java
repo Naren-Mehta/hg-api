@@ -29,4 +29,14 @@ public class UserService {
 		System.out.println(userList);
 	}
 	
+	public void updateUser(User user, Integer userId) {
+		for(int i=0;i<userList.size();i++) {
+			User u= userList.get(i);
+			if(userList.get(i).getUserId().equals(userId)) {
+				userList.set(i, user);
+				return;
+			}
+		}
+	}
+	
 }
