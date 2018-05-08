@@ -9,12 +9,12 @@ import java.util.*;
 public class UserService {
 
 	
-	private List<User> userList= Arrays.asList(
+	private List<User> userList= new ArrayList<User>(Arrays.asList(
 		new User(1,"Naren","M","naren@gmail.com","1234567890",true),
 		new User(2,"Deepak","K","deepak@gmail.com","1234567890",true),
 		new User(3,"Hemraj","M","hemraj@gmail.com","1234567890",true),
 		new User(4,"Prema","H","prema@gmail.com","1234567890",true)
-	);
+	));
 	
 	public List<User> getAllUsers(){
 		return userList;
@@ -22,6 +22,11 @@ public class UserService {
 	
 	public User getUser(Integer userId){
 		return userList.stream().filter(u -> u.getUserId().equals(userId)).findFirst().get();
+	}
+	
+	public void addUser(User user) {
+		userList.add(user);
+		System.out.println(userList);
 	}
 	
 }

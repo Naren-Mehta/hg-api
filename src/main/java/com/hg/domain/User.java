@@ -62,6 +62,13 @@ public class User {
 		this.mobileNumber = mobileNumber;
 		this.enabled = enabled;
 	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", mobileNumber=" + mobileNumber + ", enabled=" + enabled + "]";
+	}
+	
+	
 	
 	
 
