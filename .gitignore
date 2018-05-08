@@ -1,5 +1,6 @@
 #We dont want to push below files/folders to git
 
 .project
-targer/
+target/
 .settings/
+.springBeans
