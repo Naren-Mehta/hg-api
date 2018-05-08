@@ -53,6 +53,17 @@ public class User {
 	public User() {
 		super();
 	}
+	public User(Integer userId, String firstName, String lastName, String email, String mobileNumber, Boolean enabled) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.mobileNumber = mobileNumber;
+		this.enabled = enabled;
+	}
+	
+	
 
 	
 	
