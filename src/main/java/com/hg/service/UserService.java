@@ -39,4 +39,10 @@ public class UserService {
 		}
 	}
 	
+	public void deleteUser(Integer userId) {
+		
+		userList.removeIf(u -> u.getUserId().equals(userId));
+		
+	}
+	
 }
